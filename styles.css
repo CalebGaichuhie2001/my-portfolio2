@@ -1,0 +1,61 @@
+body {
+  font-family: sans-serif;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(images/lap.png);
+  background-size: cover;
+}
+.main-container {
+  color: rgb(201, 198, 198);
+  width: 50%;
+  margin: 20px auto;
+}
+.main-container h1 {
+  text-align: center;
+}
+.container-1 {
+  text-align: center;
+}
+.email {
+  padding-right: 10px;
+  margin-right: 20px;
+}
+.container-1 input {
+  display: inline-block;
+}
+.container-1 input {
+  background-color: inherit;
+  border-top: none;
+  border-right: none;
+  border-left: none;
+  border-bottom: 1px solid white;
+  color: bisque;
+}
+.container-1 input:hover {
+  border-bottom: 2px solid white;
+  transition: "border-bottom", 1s, ease;
+}
+.container-1 input::placeholder {
+  color: white;
+}
+.main-container h1 {
+  padding-top: 100px;
+}
+.footer {
+  text-align: center;
+}
+button {
+  padding: 10px;
+  border-radius: 10px;
+  width: 20%;
+  border: none;
+  cursor: pointer;
+}
+button:hover {
+  background-color: rgb(151, 148, 148);
+  transition: 1s;
+}
+a {
+  text-decoration: none;
+  color: #ffff;
+  cursor: pointer;
+}
