@@ -15,9 +15,9 @@
 }
 .nav-links {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     width: 100%;
+    position: relative;
 } 
 a{
     text-decoration: none;
@@ -29,7 +29,7 @@ a{
     justify-content: center;
     align-items: center;
     
-    margin: 0;
+    margin: 0 auto;
     padding: 0;
     gap: 20px;
     list-style-type: none;
@@ -42,4 +42,13 @@ a{
     padding: 0;
     list-style-type: none;
     gap: 10px;
+}
+
+/* Add these new classes for list alignment */
+.center-list {
+    justify-content: center !important;
+}
+
+.not-edge-list {
+    margin-right: 40px !important;
 }
