@@ -19,7 +19,7 @@
         
             </ul>
             
-            <ul class="auth-links not-edge-list"> 
+            <ul class="auth-links not-edge-list" id="authLinks"> 
                 <li><a href="login.html">Login</a></li>
                 <li><a href="signup.html">Sign Up</a></li>
                 
@@ -28,5 +28,46 @@
         </nav>
         </div>
     </header>
+
+    <main>
+        <div id="welcomeMessage" style="padding: 20px; text-align: center; display: none;">
+            <h2>Welcome back!</h2>
+            <p>You have successfully logged in.</p>
+        </div>
+    </main>
+
+    <script>
+        // Check if user is logged in
+        document.addEventListener('DOMContentLoaded', function() {
+            const isLoggedIn = localStorage.getItem('isLoggedIn');
+            const userEmail = localStorage.getItem('userEmail');
+            const authLinks = document.getElementById('authLinks');
+            const welcomeMessage = document.getElementById('welcomeMessage');
+
+            if (isLoggedIn === 'true' && userEmail) {
+                // User is logged in - show welcome message and logout option
+                welcomeMessage.style.display = 'block';
+                welcomeMessage.querySelector('p').textContent = `Welcome back, ${userEmail}!`;
+                
+                // Replace login/signup links with logout
+                authLinks.innerHTML = `
+                    <li><span>Hello, ${userEmail.split('@')[0]}</span></li>
+                    <li><a href="#" onclick="logout()">Logout</a></li>
+                `;
+            } else {
+                // User is not logged in - redirect to login page
+                window.location.href = 'login.html';
+            }
+        });
+
+        function logout() {
+            // Clear login state
+            localStorage.removeItem('isLoggedIn');
+            localStorage.removeItem('userEmail');
+            
+            // Redirect to login page
+            window.location.href = 'login.html';
+        }
+    </script>
 </body>
 </html>

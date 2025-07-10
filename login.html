@@ -13,23 +13,53 @@
         <p class="login-details">Please enter your login credentials</p>
         <h1>Welcome back </h1>
         <section>
-            <form action="homepage.html" method="post">
+            <form id="loginForm">
                 <div class="form-container">
             <div class="form-header">
-                <input type="email" name="email" placeholder="Email" required class="email">
-                <input type="password" name="password" placeholder="Password" required class="password">
+                <input type="email" name="email" id="email" placeholder="Email" required class="email">
+                <input type="password" name="password" id="password" placeholder="Password" required class="password">
                 </div>
                 <div class="remember-forgot">
     
-                <label><input type="checkbox" name="remember" id="remember" required>Remember for 30 days</label>
+                <label><input type="checkbox" name="remember" id="remember">Remember for 30 days</label>
 
                 <p><a href="#">Forgot password?</a></p>
                 </div>
                 <button type="submit">Login</button>
+                <div id="error-message" style="color: red; margin-top: 10px; display: none;"></div>
                 </div>
             </form>
         </section>
         </div>
     </main>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevent default form submission
+            
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const errorMessage = document.getElementById('error-message');
+            
+            // Clear any previous error messages
+            errorMessage.style.display = 'none';
+            
+            // Simple validation (you can customize these credentials)
+            if (email && password) {
+                // For demo purposes, accept any valid email/password combination
+                // In a real application, you would validate against a server
+                
+                // Store login state in localStorage
+                localStorage.setItem('isLoggedIn', 'true');
+                localStorage.setItem('userEmail', email);
+                
+                // Redirect to homepage
+                window.location.href = 'homepage.html';
+            } else {
+                errorMessage.textContent = 'Please enter both email and password.';
+                errorMessage.style.display = 'block';
+            }
+        });
+    </script>
 </body>
 </html>
