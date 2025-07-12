@@ -1,0 +1,67 @@
+body {
+  font-family: sans-serif;
+  background-color: rgb(22, 22, 22);
+}
+.main-container {
+  color: rgb(201, 198, 198);
+  width: 20%;
+  margin: 10px auto;
+}
+
+.container-1 {
+  display: flex;
+  flex-direction: row;
+  gap: 20px; /* Add space between elements */
+}
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 1px;
+}
+h1 {
+  text-align: center;
+  padding-top: 50px;
+}
+.gender {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.dob-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 15px 0;
+}
+.dob-group label {
+  color: rgb(230, 225, 225);
+  font-size: 1em;
+  margin-bottom: 5px;
+}
+.agree {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 15px 0;
+}
+.input-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+button {
+  display: block;
+  width: 50%;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: rgb(146, 146, 147);
+  border: none;
+  border-radius: 10px;
+}
+button:hover {
+  background-color: rgb(100, 100, 100);
+  cursor: pointer;
+  transition: background-color 1s ease;
+}
