@@ -12,6 +12,10 @@ A simple static portfolio website showcasing services, projects, and basic auth-
 - **CSS3**
 - **Font Awesome** (CDN on `login.html`)
 
+## Demo
+Once GitHub Pages is enabled for this repo, your site will be available at:
+- https://calebgaichuhie2001.github.io/my-portfolio2/
+
 ## File Structure
 ```
 my-portfolio/
@@ -54,7 +58,22 @@ my-portfolio/
 You can host this static site using GitHub Pages:
 1. Push to the `main` branch of the repo.
 2. In GitHub: Settings → Pages → Build and deployment → Branch: `main` (root) → Save.
-3. Your site will be available at the Pages URL shown by GitHub after a minute or two.
+3. Your site will be available at the URL listed in the Demo section above.
+
+## Screenshots
+Add screenshots to visually showcase the pages. Suggested shots:
+- `homepage` hero and services
+- `projects` grid hover effect
+- `about` section
+- `contact` section with video background
+- `login` page
+- `signup` page
+
+Example markdown once images are added to a `screenshots/` folder:
+```md
+![Homepage Hero](screenshots/home-hero.png)
+![Projects Grid](screenshots/projects.png)
+```
 
 ## Customization
 - Replace images and videos in `images/` and `videos/` with your own media.
@@ -63,7 +82,7 @@ You can host this static site using GitHub Pages:
 - Adjust styles in `styles.css`, `style.css`, and `style5.css` to match your brand.
 
 ## Known Notes / Improvements
-- The navbar and several links reference `signup.html`, but the actual file is `signup2.html`. Either rename `signup2.html` to `signup.html` or update links to `signup2.html` for consistency.
+- The navbar links now correctly reference `signup2.html`.
 - Forms are front-end only; wire up to a backend or a service like Formspree/Netlify Forms for real submissions.
 - Consider optimizing media (images/videos) for faster load times.
 
