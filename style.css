@@ -1,0 +1,89 @@
+body {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url(images/paris.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  width: 95%;
+}
+
+.container {
+  font-family: cursive;
+  color: white;
+  display: flex;
+}
+.login-container {
+  width: 40%;
+  padding: 100px;
+}
+h1 {
+  font-size: 40px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.social-icons i {
+  font-size: 20px;
+  margin: 0 12px;
+  color: #ffff;
+  transition: color 0.3s ease;
+  cursor: pointer;
+}
+h2 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 600;
+  margin: auto;
+  padding: 50px;
+}
+
+.form-container {
+  width: 25%;
+}
+.form-container input[type="email"],
+input[type="password"] {
+  display: block;
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  display: block;
+  width: 40%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: none;
+  background-color: rgb(253, 141, 4);
+  padding: 5px;
+  border-radius: 3px;
+  color: white;
+  cursor: pointer;
+}
+
+.form-container a {
+  text-decoration: none;
+  color: white;
+}
+button:hover {
+  background-color: rgb(137, 93, 43);
+  transition: background-color 1s ease;
+}
+.signup-link {
+  text-align: right;
+  margin-top: 20px;
+  margin-right: 100px;
+  font-size: 15px;
+  color: white;
+  font-family: cursive;
+}
+.signup-link a {
+  color: white;
+}
+.break-line {
+  display: block;
+  margin: auto;
+  padding-right: 25px;
+}
